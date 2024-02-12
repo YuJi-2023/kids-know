@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { CardChecklist, Trash } from "react-bootstrap-icons";
@@ -6,8 +6,8 @@ import Container from "react-bootstrap/Container";
 import FormControl from "react-bootstrap/FormControl";
 import InputGroup from "react-bootstrap/InputGroup";
 import Navbar from "react-bootstrap/Navbar";
-import { createRoot } from 'react-dom/client';
-
+import { createRoot } from "react-dom/client";
+import Table from "./components/table";
 
 function TodoList() {
   return [
@@ -46,18 +46,21 @@ function TodoList() {
 
 function TodoItem(props) {
   return (
-     <InputGroup key={props.id}>
-      <InputGroup.Checkbox defaultChecked={props.completed} onChange={props.onToggle} />
+    <InputGroup key={props.id}>
+      <InputGroup.Checkbox
+        defaultChecked={props.completed}
+        onChange={props.onToggle}
+      />
       <FormControl
         defaultValue={props.title}
         style={{
-          textDecoration: props.completed ? "line-through" : "none"
+          textDecoration: props.completed ? "line-through" : "none",
         }}
-        />
-        <Button variant="outline-danger" onClick={props.onDelete}>
-          <Trash />
-        </Button>
-     </InputGroup>
+      />
+      <Button variant="outline-danger" onClick={props.onDelete}>
+        <Trash />
+      </Button>
+    </InputGroup>
   );
 }
 
@@ -75,26 +78,29 @@ function App() {
       </Navbar>
 
       <Container>
-        {todos.map((todo) => (  
+        {todos.map((todo) => (
           <TodoItem
             key={todo.id}
             title={todo.title}
             completed={todo.completed}
-            onDelete={() =>{ 
+            onDelete={() => {
               setTodos(todos.filter((x) => x.id !== todo.id));
             }}
-            onToggle={() =>{
+            onToggle={() => {
               setTodos(
                 todos.map((x) =>
                   x.id === todo.id ? { ...x, completed: !x.completed } : x
                 )
-              )
+              );
             }}
           />
         ))}
       </Container>
-    </> 
+      <Container>
+        <Table></Table>
+      </Container>
+    </>
   );
 }
 
-createRoot(document.getElementById('root')).render(<App />);
+createRoot(document.getElementById("root")).render(<App />);
