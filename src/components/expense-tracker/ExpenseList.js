@@ -1,6 +1,4 @@
-import React from "react";
-
-const ExpenseList = () =>{
+const ExpenseList = () => {
   return (
     <table className="table table-bordered">
       <thead>
@@ -12,7 +10,7 @@ const ExpenseList = () =>{
         </tr>
       </thead>
     </table>
-  )
-}
+  );
+};
 
 export default ExpenseList;

@@ -14,10 +14,10 @@ function MyNavBar() {
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#todos">ToDos</Nav.Link>
             <Nav.Link href="#expenseTracker">$ Tracker</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+            <NavDropdown title="Tips" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Money Smart</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
-                Another action
+                Time Master
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
