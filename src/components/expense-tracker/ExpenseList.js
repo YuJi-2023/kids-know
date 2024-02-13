@@ -1,6 +1,6 @@
 import React from "react";
 
-const Table = () =>{
+const ExpenseList = () =>{
   return (
     <table className="table table-bordered">
       <thead>
@@ -15,4 +15,4 @@ const Table = () =>{
   )
 }
 
-export default Table;
+export default ExpenseList;
