@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { createRoot } from "react-dom/client";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
-import { CardChecklist, Trash } from "react-bootstrap-icons";
+import { CardChecklist } from "react-bootstrap-icons";
 import { TodoList, TodoItem } from "./components/todolist";
 import Table from "./components/table";
 

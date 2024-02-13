@@ -2,7 +2,7 @@
 import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
 import { Button } from "react-bootstrap";
-import { CardChecklist, Trash } from "react-bootstrap-icons";
+import { Trash } from "react-bootstrap-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export function TodoList() {
