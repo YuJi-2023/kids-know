@@ -97,7 +97,9 @@ function App() {
         ))}
       </Container>
       <Container>
-        <Table></Table>
+        <div className="mt-3">
+          <Table></Table>
+        </div>
       </Container>
     </>
   );
