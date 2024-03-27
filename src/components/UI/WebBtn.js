@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 const WebBtn = () => {
   return (
     <>
-      <Button variant="outline-secondary">Contact Me</Button>{" "}
+      <Button variant="outline-primary">Contact Me</Button>
     </>
   );
 };

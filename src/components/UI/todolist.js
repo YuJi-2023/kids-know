@@ -1,4 +1,3 @@
-
 import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
 import { Button } from "react-bootstrap";
@@ -53,7 +52,7 @@ export function TodoItem(props) {
           textDecoration: props.completed ? "line-through" : "none",
         }}
       />
-      <Button variant="outline-danger" onClick={props.onDelete}>
+      <Button variant="outline-primary" onClick={props.onDelete}>
         <Trash />
       </Button>
     </InputGroup>
