@@ -12,28 +12,28 @@ const Footer = () => {
         <Container>
           <Row className="text-center">
             <Col md={4} className="footer-logo px-2">
-              <Image fluid src={logo} alt="footer-logo" />
+              <Image fluid src={logo} alt="footer-logo" href="/" />
             </Col>
             <Col md={2} className="footer-link pt-3">
               <h5>ToDos</h5>
               <ul className="list-unstyled">
                 <li>
-                  <a className="link-white">
+                  <a href="/" className="link-white">
                     todo1
                   </a>
                 </li>
                 <li>
-                  <a className="link-white">
+                  <a href="/" className="link-white">
                     todo2
                   </a>
                 </li>
                 <li>
-                  <a className="link-white">
+                  <a href="/" className="link-white">
                     todo3
                   </a>
                 </li>
                 <li>
-                  <a className="link-white">
+                  <a href="/" className="link-white">
                     todo4
                   </a>
                 </li>
@@ -43,32 +43,32 @@ const Footer = () => {
               <h5>WeeklySchedule</h5>
               <ul className="list-unstyled">
                 <li>
-                  <a className="link-white">
+                  <a href="/" className="link-white">
                     Mon
                   </a>
                 </li>
                 <li>
-                  <a className="link-white">
+                  <a href="/" className="link-white">
                     Tue
                   </a>
                 </li>
                 <li>
-                  <a className="link-white">
+                  <a href="/" className="link-white">
                     Wed
                   </a>
                 </li>
                 <li>
-                  <a className="link-white">
+                  <a href="/" className="link-white">
                     Thur
                   </a>
                 </li>
                 <li>
-                  <a className="link-white">
+                  <a href="/" className="link-white">
                     Fri
                   </a>
                 </li>
                 <li>
-                  <a className="link-white">
+                  <a href="/" className="link-white">
                     Weekend
                   </a>
                 </li>
@@ -78,12 +78,12 @@ const Footer = () => {
               <h5>$ Tracker</h5>
               <ul className="list-unstyled">
                 <li>
-                  <a className="link-white">
+                  <a href="/" className="link-white">
                     expenses
                   </a>
                 </li>
                 <li>
-                  <a className="link-white">
+                  <a href="/" className="link-white">
                     savings
                   </a>
                 </li>
@@ -107,7 +107,7 @@ const Footer = () => {
           <Row>
             <Col md={6} xs={6}>
               <p>
-                <a className="link-white">
+                <a href="/" className="link-white">
                   Terms & Conditions
                 </a>
               </p>
@@ -115,7 +115,7 @@ const Footer = () => {
 
             <Col md={2} xs={6}>
               <div className="social_media">
-                <a>
+                <a href="/">
                   <svg
                     width="18"
                     height="18"
@@ -128,7 +128,7 @@ const Footer = () => {
                     <path d="M10.03,5.45c-2.55,0-4.63,2.06-4.63,4.6c0,2.55,2.07,4.61,4.63,4.61c2.56,0,4.63-2.061,4.63-4.61 C14.65,7.51,12.58,5.45,10.03,5.45L10.03,5.45L10.03,5.45z M10.08,13c-1.66,0-3-1.34-3-2.99c0-1.65,1.34-2.99,3-2.99s3,1.34,3,2.99 C13.08,11.66,11.74,13,10.08,13L10.08,13L10.08,13z"></path>
                   </svg>
                 </a>
-                <a>
+                <a href="/">
                   <svg
                     width="18"
                     height="18"
