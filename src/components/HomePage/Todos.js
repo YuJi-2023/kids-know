@@ -8,7 +8,7 @@ const Todos = () => {
   return (
     <>
       <Container className="my-5">
-        <h3 className="text-center mb-4"> My Daily Schedule is HERE!!</h3>
+        <h3 className="text-center mb-4 text-primary"> My Daily Schedule is HERE!!</h3>
         <div>
           {todos.map((todo) => (
             <TodoItem

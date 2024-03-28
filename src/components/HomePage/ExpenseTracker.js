@@ -5,7 +5,7 @@ const ExpenseTracker = () => {
   return (
     <>
       <Container>
-        <h3 className="text-center mb-4">My Expense Tracker</h3>
+        <h3 className="text-center mb-4 text-primary">My Expense Tracker</h3>
         <div>
           <table className="table table-bordered">
             <thead>
