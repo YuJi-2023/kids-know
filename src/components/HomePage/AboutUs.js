@@ -7,7 +7,7 @@ import { Container } from "react-bootstrap";
 const AboutUs = () => {
   return (
     <>
-      <Container className="bg-primary px-5 d-block w-50" fluid>
+      <Container className="bg-primary px-5 d-block w-50 mt-5" fluid>
         <Carousel className="py-5">
           <Carousel.Item>
             <img

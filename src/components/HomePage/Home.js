@@ -4,6 +4,7 @@ import Footer from "../Layout/Footer/Footer";
 import Todos from "./Todos";
 import ExpenseTracker from "./ExpenseTracker";
 import AboutUs from "./AboutUs";
+import IntroVideo from "./IntroVideo";
 
 function Home() {
   return (
@@ -12,6 +13,7 @@ function Home() {
       <AboutUs />
       <Todos />
       <ExpenseTracker />
+      <IntroVideo />
       <Footer />
     </>
   );

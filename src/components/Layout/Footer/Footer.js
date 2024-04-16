@@ -7,7 +7,7 @@ import WebBtn from "../../UI/WebBtn";
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer border-top border-primary">
       <div className="footer-top pt-5">
         <Container>
           <Row className="text-center">
@@ -102,20 +102,16 @@ const Footer = () => {
           </Row>
         </Container>
       </div>
-      <div className="footer-bottom py-2">
+      <div className="footer-bottom pt-2">
         <Container className="footer-bottom-bg">
           <Row>
             <Col md={6} xs={6}>
-              <p>
-                <a href="/" className="link-white">
-                  Terms & Conditions
-                </a>
-              </p>
+              <p className="text-white">Terms & Conditions</p>
             </Col>
 
-            <Col md={2} xs={6}>
-              <div className="social_media">
-                <a href="/">
+            <Col md={6} xs={6}>
+              <div className="d-flex justify-content-end">
+                <div className="px-1">
                   <svg
                     width="18"
                     height="18"
@@ -127,8 +123,8 @@ const Footer = () => {
                     <circle cx="14.87" cy="5.26" r="1.09"></circle>
                     <path d="M10.03,5.45c-2.55,0-4.63,2.06-4.63,4.6c0,2.55,2.07,4.61,4.63,4.61c2.56,0,4.63-2.061,4.63-4.61 C14.65,7.51,12.58,5.45,10.03,5.45L10.03,5.45L10.03,5.45z M10.08,13c-1.66,0-3-1.34-3-2.99c0-1.65,1.34-2.99,3-2.99s3,1.34,3,2.99 C13.08,11.66,11.74,13,10.08,13L10.08,13L10.08,13z"></path>
                   </svg>
-                </a>
-                <a href="/">
+                </div>
+                <div className="px-1">
                   <svg
                     width="18"
                     height="18"
@@ -138,13 +134,11 @@ const Footer = () => {
                   >
                     <path d="M11,10h2.6l0.4-3H11V5.3c0-0.9,0.2-1.5,1.5-1.5H14V1.1c-0.3,0-1-0.1-2.1-0.1C9.6,1,8,2.4,8,5v2H5.5v3H8v8h3V10z"></path>
                   </svg>
-                </a>
-              </div>
-            </Col>
-            <Col md={2} xs={6}>
-              <p className="text-muted text-center">
+                </div>
+                <p className="text-white">
                 &copy; KidsKnow {new Date().getFullYear()}
               </p>
+              </div>
             </Col>
           </Row>
         </Container>
