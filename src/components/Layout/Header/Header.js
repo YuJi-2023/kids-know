@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import logo from "../../../assests/logo.png";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
@@ -7,6 +8,14 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import WebBtn from "../../UI/WebBtn";
 
 const Header = () => {
+  const navigate = useNavigate();
+  const handleHomeClick: () => void = () => {
+    navigate("/");
+  };
+
+  const handleToDos: () => void = () => {
+    navigate("/todos");
+  };
   return (
     <>
       <Container className="pb-3">
@@ -22,8 +31,8 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                   <Nav className="me-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#todos">ToDos</Nav.Link>
+                    <Nav.Link onClick={handleHomeClick}>Home</Nav.Link>
+                    <Nav.Link onClick={handleToDos}>ToDos</Nav.Link>
                     <Nav.Link href="#todos">WeeklySchedule</Nav.Link>
                     <Nav.Link href="#expenseTracker">$ Tracker</Nav.Link>
                     <NavDropdown title="Tips" id="basic-nav-dropdown">
