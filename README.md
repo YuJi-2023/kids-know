@@ -2,7 +2,7 @@
 
 ## Viewing the Deployed Site
 
-You can view the deployed site by following this link: [View the Site](https://sophia-learn-react.s3.ap-southeast-2.amazonaws.com/index.html)
+You can view the deployed site by following this link: [View the Site](https://kids-know.s3.ap-southeast-2.amazonaws.com/index.html/)
 
 ## Project Description
 
