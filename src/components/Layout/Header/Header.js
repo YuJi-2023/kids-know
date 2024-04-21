@@ -10,15 +10,15 @@ import WebBtn from "../../UI/WebBtn";
 const Header = () => {
   const navigate = useNavigate();
   const handleHomeClick: () => void = () => {
-    navigate("/");
+    navigate("/index.html/");
   };
 
   const handleToDos: () => void = () => {
-    navigate("/todos");
+    navigate("/index.html/todos");
   };
 
   const handleWeeklySch: () => void = () => {
-    navigate("/weeklyschedule");
+    navigate("/index.html/weeklyschedule");
   };
   return (
     <>
@@ -37,7 +37,9 @@ const Header = () => {
                   <Nav className="me-auto">
                     <Nav.Link onClick={handleHomeClick}>Home</Nav.Link>
                     <Nav.Link onClick={handleToDos}>ToDos</Nav.Link>
-                    <Nav.Link onClick={handleWeeklySch}>WeeklySchedule</Nav.Link>
+                    <Nav.Link onClick={handleWeeklySch}>
+                      WeeklySchedule
+                    </Nav.Link>
                     <Nav.Link href="#expenseTracker">$ Tracker</Nav.Link>
                     <NavDropdown title="Tips" id="basic-nav-dropdown">
                       <NavDropdown.Item href="#action/3.1">
