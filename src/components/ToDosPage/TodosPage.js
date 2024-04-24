@@ -3,6 +3,7 @@ import Header from "../Layout/Header/Header";
 import Footer from "../Layout/Footer/Footer";
 import Todos from "./Todos";
 import TodosFeature from "./TodosFeature";
+import TodoIdeas from "./TodoIdeas";
 import TodoItems from "./TodoItems";
 
 function ToDosPage() {
@@ -10,8 +11,9 @@ function ToDosPage() {
     <>
       <Header />
       <Todos />
-      <TodosFeature />
       <TodoItems />
+      <TodosFeature />
+      <TodoIdeas />
       <Footer />
     </>
   );

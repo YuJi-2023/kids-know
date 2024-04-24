@@ -45,13 +45,13 @@ const features = [
 const TodosFeature = () => {
   return (
     <>
-      <Container fluid className="text-center text-secondary">
-        <Row className="justify-content-md-center mb-5">
+      <Container fluid className="text-center text-secondary py-5">
+        <Row className="justify-content-md-center mb-4">
           <Col>
             <h2 className="text-primary"> Pick Your Rewards</h2>
           </Col>
         </Row>
-        <Row className="justify-content-md-center px-5 mb-5">
+        <Row className="justify-content-md-center px-5 mb-4">
           {features.map((feature) => (
             <Col key={feature.id}>
               <WebFeature feature={feature} />
