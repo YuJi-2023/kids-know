@@ -1,5 +1,4 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import { ArrowUp } from "react-bootstrap-icons";
 import logo from "../../../assests/logo.png";
@@ -7,18 +6,6 @@ import "./Footer.css";
 import WebBtn from "../../UI/WebBtn";
 
 const Footer = () => {
-  const navigate = useNavigate();
-  const handleHomeClick: () => void = () => {
-    navigate("/index.html/");
-  };
-
-  const handleToDos: () => void = () => {
-    navigate("/index.html/todos");
-  };
-
-  const handleMySchedule: () => void = () => {
-    navigate("/index.html/weeklyschedule");
-  };
   return (
     <footer className="footer border-top border-primary">
       <div className="footer-top pt-5">
@@ -50,39 +37,39 @@ const Footer = () => {
               </ul>
             </Col>
             <Col md={2} className="footer-title pt-3">
-              <a href="/" className="fw-bold fs-5">
+              <a href="/index.html/" className="fw-bold fs-5">
                 About Us
               </a>
               <ul className="list-unstyled">
                 <li>
-                  <a href="/" className="footer-link">
+                  <a href="/index.html/" className="footer-link">
                     Our Vision
                   </a>
                 </li>
                 <li>
-                  <a href="/" className="footer-link">
+                  <a href="/index.html/" className="footer-link">
                     Our Mission
                   </a>
                 </li>
                 <li>
-                  <a href="/" className="footer-link">
+                  <a href="/index.html/" className="footer-link">
                     Our Hope
                   </a>
                 </li>
               </ul>
             </Col>
             <Col md={2} className="footer-title pt-3">
-              <a href="/" className="fw-bold fs-5">
+              <a href="/index.html/" className="fw-bold fs-5">
                 Hot Tips
               </a>
               <ul className="list-unstyled">
                 <li>
-                  <a href="/" className="footer-link">
+                  <a href="/index.html/" className="footer-link">
                     Parents
                   </a>
                 </li>
                 <li>
-                  <a href="/" className="footer-link">
+                  <a href="/index.html/" className="footer-link">
                     Kiddos
                   </a>
                 </li>
