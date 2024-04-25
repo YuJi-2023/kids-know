@@ -7,7 +7,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="index.html/" element={<Home />} />
+        <Route path="index.html" element={<Home />} />
         <Route path="index.html/todos" element={<ToDosPage />} />
         <Route path="index.html/myschedule" element={<SchPage />} />
       </Routes>

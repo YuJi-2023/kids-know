@@ -10,7 +10,7 @@ import WebBtn from "../../UI/WebBtn";
 const Header = () => {
   const navigate = useNavigate();
   const handleHomeClick: () => void = () => {
-    navigate("/index.html/");
+    navigate("/index.html");
   };
 
   const handleToDos: () => void = () => {

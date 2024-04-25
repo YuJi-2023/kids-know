@@ -15,7 +15,7 @@ const Footer = () => {
               <Image fluid src={logo} alt="footer-logo" href="/" />
             </Col>
             <Col md={2} className="footer-title pt-3">
-              <a href="/index.html/" className="fw-bold fs-5">
+              <a href="/index.html" className="fw-bold fs-5">
                 Home
               </a>
               <ul className="list-unstyled">
@@ -30,46 +30,46 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="/index.html/" className="footer-link">
+                  <a href="/index.html" className="footer-link">
                     $ Tracker
                   </a>
                 </li>
               </ul>
             </Col>
             <Col md={2} className="footer-title pt-3">
-              <a href="/index.html/" className="fw-bold fs-5">
+              <a href="/index.html" className="fw-bold fs-5">
                 About Us
               </a>
               <ul className="list-unstyled">
                 <li>
-                  <a href="/index.html/" className="footer-link">
+                  <a href="/index.html" className="footer-link">
                     Our Vision
                   </a>
                 </li>
                 <li>
-                  <a href="/index.html/" className="footer-link">
+                  <a href="/index.html" className="footer-link">
                     Our Mission
                   </a>
                 </li>
                 <li>
-                  <a href="/index.html/" className="footer-link">
+                  <a href="/index.html" className="footer-link">
                     Our Hope
                   </a>
                 </li>
               </ul>
             </Col>
             <Col md={2} className="footer-title pt-3">
-              <a href="/index.html/" className="fw-bold fs-5">
+              <a href="/index.html" className="fw-bold fs-5">
                 Hot Tips
               </a>
               <ul className="list-unstyled">
                 <li>
-                  <a href="/index.html/" className="footer-link">
+                  <a href="/index.html" className="footer-link">
                     Parents
                   </a>
                 </li>
                 <li>
-                  <a href="/index.html/" className="footer-link">
+                  <a href="/index.html" className="footer-link">
                     Kiddos
                   </a>
                 </li>
