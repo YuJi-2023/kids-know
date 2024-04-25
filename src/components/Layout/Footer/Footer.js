@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import { ArrowUp } from "react-bootstrap-icons";
 import logo from "../../../assests/logo.png";
@@ -15,63 +16,63 @@ const Footer = () => {
               <Image fluid src={logo} alt="footer-logo" href="/" />
             </Col>
             <Col md={2} className="footer-title pt-3">
-              <a href="/index.html" className="fw-bold fs-5">
+              <Link to="/index.html" className="fw-bold fs-5">
                 Home
-              </a>
+              </Link>
               <ul className="list-unstyled">
                 <li>
-                  <a href="/index.html/todos" className="footer-link">
+                  <Link to="/index.html/todos" className="footer-link">
                     Todos
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/index.html/myschedule" className="footer-link">
+                  <Link to="/index.html/myschedule" className="footer-link">
                     MySchedule
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/index.html" className="footer-link">
+                  <Link to="/index.html" className="footer-link">
                     $ Tracker
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </Col>
             <Col md={2} className="footer-title pt-3">
-              <a href="/index.html" className="fw-bold fs-5">
+              <Link to="/index.html" className="fw-bold fs-5">
                 About Us
-              </a>
+              </Link>
               <ul className="list-unstyled">
                 <li>
-                  <a href="/index.html" className="footer-link">
+                  <Link to="/index.html" className="footer-link">
                     Our Vision
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/index.html" className="footer-link">
+                  <Link to="/index.html" className="footer-link">
                     Our Mission
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/index.html" className="footer-link">
+                  <Link to="/index.html" className="footer-link">
                     Our Hope
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </Col>
             <Col md={2} className="footer-title pt-3">
-              <a href="/index.html" className="fw-bold fs-5">
+              <Link to="/index.html" className="fw-bold fs-5">
                 Hot Tips
-              </a>
+              </Link>
               <ul className="list-unstyled">
                 <li>
-                  <a href="/index.html" className="footer-link">
+                  <Link to="/index.html" className="footer-link">
                     Parents
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/index.html" className="footer-link">
+                  <Link to="/index.html" className="footer-link">
                     Kiddos
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </Col>
