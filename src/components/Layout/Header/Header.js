@@ -17,8 +17,8 @@ const Header = () => {
     navigate("/index.html/todos");
   };
 
-  const handleWeeklySch: () => void = () => {
-    navigate("/index.html/weeklyschedule");
+  const handleMySchedule: () => void = () => {
+    navigate("/index.html/myschedule");
   };
   return (
     <>
@@ -37,9 +37,7 @@ const Header = () => {
                   <Nav className="me-auto">
                     <Nav.Link onClick={handleHomeClick}>Home</Nav.Link>
                     <Nav.Link onClick={handleToDos}>ToDos</Nav.Link>
-                    <Nav.Link onClick={handleWeeklySch}>
-                      WeeklySchedule
-                    </Nav.Link>
+                    <Nav.Link onClick={handleMySchedule}>MySchedule</Nav.Link>
                     <Nav.Link href="#expenseTracker">$ Tracker</Nav.Link>
                     <NavDropdown title="Tips" id="basic-nav-dropdown">
                       <NavDropdown.Item href="#action/3.1">

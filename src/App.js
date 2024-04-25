@@ -4,15 +4,14 @@ import ToDosPage from "./components/ToDosPage/TodosPage";
 import SchPage from "./components/SchPage/SchPage";
 
 function App() {
-
   return (
     <BrowserRouter>
-    <Routes>
-      <Route path="index.html/" element={<Home />} />
-      <Route path="index.html/todos" element={<ToDosPage />} />
-      <Route path="index.html/weeklyschedule" element={<SchPage />} />
-    </Routes>
-  </BrowserRouter>
+      <Routes>
+        <Route path="index.html/" element={<Home />} />
+        <Route path="index.html/todos" element={<ToDosPage />} />
+        <Route path="index.html/myschedule" element={<SchPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

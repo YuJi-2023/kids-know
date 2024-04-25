@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import { ArrowUp } from "react-bootstrap-icons";
 import logo from "../../../assests/logo.png";
@@ -6,93 +7,91 @@ import "./Footer.css";
 import WebBtn from "../../UI/WebBtn";
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const handleHomeClick: () => void = () => {
+    navigate("/index.html/");
+  };
+
+  const handleToDos: () => void = () => {
+    navigate("/index.html/todos");
+  };
+
+  const handleMySchedule: () => void = () => {
+    navigate("/index.html/weeklyschedule");
+  };
   return (
     <footer className="footer border-top border-primary">
       <div className="footer-top pt-5">
         <Container>
-          <Row className="text-center">
+          <Row className="">
             <Col md={4} className="footer-logo px-2">
               <Image fluid src={logo} alt="footer-logo" href="/" />
             </Col>
-            <Col md={2} className="footer-link pt-3">
-              <h5>ToDos</h5>
+            <Col md={2} className="footer-title pt-3">
+              <a href="/index.html/" className="fw-bold fs-5">
+                Home
+              </a>
               <ul className="list-unstyled">
                 <li>
-                  <a href="/" className="link-white">
-                    todo1
+                  <a href="/index.html/todos" className="footer-link">
+                    Todos
                   </a>
                 </li>
                 <li>
-                  <a href="/" className="link-white">
-                    todo2
+                  <a href="/index.html/myschedule" className="footer-link">
+                    MySchedule
                   </a>
                 </li>
                 <li>
-                  <a href="/" className="link-white">
-                    todo3
-                  </a>
-                </li>
-                <li>
-                  <a href="/" className="link-white">
-                    todo4
+                  <a href="/index.html/" className="footer-link">
+                    $ Tracker
                   </a>
                 </li>
               </ul>
             </Col>
-            <Col md={2} className="footer-link pt-3">
-              <h5>WeeklySchedule</h5>
+            <Col md={2} className="footer-title pt-3">
+              <a href="/" className="fw-bold fs-5">
+                About Us
+              </a>
               <ul className="list-unstyled">
                 <li>
-                  <a href="/" className="link-white">
-                    Mon
+                  <a href="/" className="footer-link">
+                    Our Vision
                   </a>
                 </li>
                 <li>
-                  <a href="/" className="link-white">
-                    Tue
+                  <a href="/" className="footer-link">
+                    Our Mission
                   </a>
                 </li>
                 <li>
-                  <a href="/" className="link-white">
-                    Wed
-                  </a>
-                </li>
-                <li>
-                  <a href="/" className="link-white">
-                    Thur
-                  </a>
-                </li>
-                <li>
-                  <a href="/" className="link-white">
-                    Fri
-                  </a>
-                </li>
-                <li>
-                  <a href="/" className="link-white">
-                    Weekend
+                  <a href="/" className="footer-link">
+                    Our Hope
                   </a>
                 </li>
               </ul>
             </Col>
-            <Col md={2} className="footer-link pt-3">
-              <h5>$ Tracker</h5>
+            <Col md={2} className="footer-title pt-3">
+              <a href="/" className="fw-bold fs-5">
+                Hot Tips
+              </a>
               <ul className="list-unstyled">
                 <li>
-                  <a href="/" className="link-white">
-                    expenses
+                  <a href="/" className="footer-link">
+                    Parents
                   </a>
                 </li>
                 <li>
-                  <a href="/" className="link-white">
-                    savings
+                  <a href="/" className="footer-link">
+                    Kiddos
                   </a>
                 </li>
               </ul>
             </Col>
-            <Col md={2} className="footer-link pt-5">
+            <Col md={2} className="footer-title pt-5">
               <a
                 href="#top"
-                className="link-white clearfix mb-3 d-block"
+                className="footer-link clearfix mb-3 d-block"
                 id="scroll-top"
               >
                 <ArrowUp /> Back to Top{" "}
@@ -136,8 +135,8 @@ const Footer = () => {
                   </svg>
                 </div>
                 <p className="text-white">
-                &copy; KidsKnow {new Date().getFullYear()}
-              </p>
+                  &copy; KidsKnow {new Date().getFullYear()}
+                </p>
               </div>
             </Col>
           </Row>
