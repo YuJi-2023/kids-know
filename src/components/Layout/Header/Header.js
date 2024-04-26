@@ -22,10 +22,14 @@ const Header = () => {
   };
   return (
     <>
-      <Container className="pb-3">
+      <Container className="pb-3" fluid>
         <Row>
           <Col sm={{ span: 4, offset: 4 }}>
-            <Image fluid src={logo} alt="header-logo" href="#" />
+            <Row>
+              <Col sm={{ span: 8, offset: 2 }}>
+                <Image fluid src={logo} alt="header-logo" href="#" />
+                </Col>
+            </Row>
           </Col>
         </Row>
         <Row>
@@ -49,7 +53,7 @@ const Header = () => {
                     </NavDropdown>
                   </Nav>
                 </Navbar.Collapse>
-                <WebBtn />
+                <WebBtn text={"Contact Us"}/>
               </Container>
             </Navbar>
           </Col>

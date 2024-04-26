@@ -7,7 +7,7 @@ const WebCard = ({ imgSrc, title, text }) => {
       style={{ width: "15rem" }}
       className="py-3 text-secondary border-primary"
     >
-      <Card.Img variant="top" src={imgSrc} />
+      <Card.Img src={imgSrc} />
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>{text}</Card.Text>

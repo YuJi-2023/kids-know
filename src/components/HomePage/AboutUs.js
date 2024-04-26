@@ -3,11 +3,13 @@ import Carousel from "react-bootstrap/Carousel";
 import slide_1 from "../../assests/HomePageSlides/slide_1.jpg";
 import slide_2 from "../../assests/HomePageSlides/slide_2.jpg";
 import slide_3 from "../../assests/HomePageSlides/slide_3.jpg";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 const AboutUs = () => {
   return (
     <>
-      <Container className="bg-primary px-5 d-block w-50 mt-5" fluid>
+      <Container className="d-block my-5" fluid>
+      <Row className="justify-content-md-center">
+          <Col lg="8" className="bg-primary px-5">
         <Carousel className="py-5">
           <Carousel.Item>
             <img
@@ -43,6 +45,8 @@ const AboutUs = () => {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
+        </Col>
+        </Row>
       </Container>
     </>
   );

@@ -84,7 +84,7 @@ const Footer = () => {
               >
                 <ArrowUp /> Back to Top{" "}
               </a>
-              <WebBtn />
+              <WebBtn text={"Contact Us"} />
             </Col>
           </Row>
         </Container>
