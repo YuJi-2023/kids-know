@@ -84,7 +84,10 @@ const Footer = () => {
               >
                 <ArrowUp /> Back to Top{" "}
               </a>
-              <WebBtn text={"Contact Us"} />
+              <WebBtn
+                text={"Contact Us"}
+                link={"mailto:sophia.jiyu@gmail.com"}
+              />
             </Col>
           </Row>
         </Container>

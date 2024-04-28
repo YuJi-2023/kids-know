@@ -1,23 +1,36 @@
-import React from "react";
-import { Container, Card, Row, Col } from "react-bootstrap";
-import WebBtn from "../UI/WebBtn";
+import React, { useState } from "react";
+import { Button, Container, Card, Row, Col, Collapse } from "react-bootstrap";
 import routinePic from "../../assests/routinePic.jpg";
 
 const Routine = () => {
+  const [expanded, setExpanded] = useState(false);
+  const handleToggle = () => {
+    setExpanded(!expanded);
+  };
+
   return (
     <>
       <Container fluid className="mb-5 py-5 bg-light">
         <Row className="justify-content-md-center">
           <Col lg="8">
-            <Card className="text-primary border-light">
+            <Card className="text-secondary border-light">
               <Card.Img src={routinePic} alt="routine image" />
               <Card.ImgOverlay className="p-5">
-                <Card.Title>How Routine Helps Kids Grow</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-                <WebBtn text="Read more">Go somewhere</WebBtn>
+                <Card.Title className="fw-bold">
+                  How Routine Helps Kids Grow
+                </Card.Title>
+                <Collapse in={expanded}>
+                  <Card.Text>
+                    Routines provide a structured and supportive environment for
+                    young children to grow, learn, and thrive. They offer a
+                    framework that promotes physical, emotional, cognitive, and
+                    social development, laying the foundation for lifelong
+                    skills and habits.
+                  </Card.Text>
+                </Collapse>
+                <Button onClick={handleToggle}>
+                  {expanded ? "Read less" : "Read more"}
+                </Button>
               </Card.ImgOverlay>
             </Card>
           </Col>

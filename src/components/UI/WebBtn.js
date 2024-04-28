@@ -1,9 +1,9 @@
 import Button from "react-bootstrap/Button";
 
-const WebBtn = ({text}) => {
+const WebBtn = ({text, link}) => {
   return (
     <>
-      <Button href="mailto:sophia.jiyu@gmail.com" variant="outline-primary">{text}</Button>
+      <Button href={link} variant="outline-primary">{text}</Button>
     </>
   );
 };

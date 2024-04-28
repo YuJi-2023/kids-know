@@ -28,7 +28,7 @@ const Header = () => {
             <Row>
               <Col sm={{ span: 8, offset: 2 }}>
                 <Image fluid src={logo} alt="header-logo" href="#" />
-                </Col>
+              </Col>
             </Row>
           </Col>
         </Row>
@@ -53,7 +53,10 @@ const Header = () => {
                     </NavDropdown>
                   </Nav>
                 </Navbar.Collapse>
-                <WebBtn text={"Contact Us"}/>
+                <WebBtn
+                  text={"Contact Us"}
+                  link={"mailto:sophia.jiyu@gmail.com"}
+                />
               </Container>
             </Navbar>
           </Col>
