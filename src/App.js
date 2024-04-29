@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/HomePage/Home";
-import ToDosPage from "./components/ToDosPage/ToDosPage";
+import ToDosPage from "./components/ToDosPage/TodosPage";
 import SchPage from "./components/SchPage/SchPage";
 import ExpenseTrackerPage from "./components/ExpenseTrackerPage/ExpenseTrackerPage";
 

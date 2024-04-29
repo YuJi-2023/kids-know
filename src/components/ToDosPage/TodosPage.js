@@ -6,7 +6,7 @@ import TodosFeature from "./TodosFeature";
 import TodoIdeas from "./TodosIdeas";
 import TodoItems from "./TodosItems";
 
-function ToDosPage() {
+function TodosPage() {
   return (
     <>
       <Header />
@@ -19,4 +19,4 @@ function ToDosPage() {
   );
 }
 
-export default ToDosPage;
+export default TodosPage;
