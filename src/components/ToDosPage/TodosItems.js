@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Container, Row, Stack } from "react-bootstrap";
 import WebCard from "../UI/WebCard";
-import todoItemsList from "../ToDosPage/todoItemlist";
+import todoItemsList from "./itemlist";
 
 const TodoItems = ({ name, imgSrc }) => {
   return (

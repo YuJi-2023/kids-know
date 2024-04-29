@@ -1,8 +1,7 @@
 import React from "react";
 import Header from "../Layout/Header/Header";
 import Footer from "../Layout/Footer/Footer";
-import Todos from "../ToDosPage/Todos";
-// import ExpenseTracker from "./ExpenseTracker";
+import TodosForm from "../ToDosPage/TodosForm";
 import AboutUs from "./AboutUs";
 import IntroVideo from "./IntroVideo";
 import Routine from "./Routine";
@@ -12,9 +11,8 @@ function Home() {
     <>
       <Header />
       <Routine />
-      <Todos />
+      <TodosForm title="Daily Todos"/>
       <AboutUs />
-      {/* <ExpenseTracker /> */}
       <IntroVideo />
       <Footer />
     </>

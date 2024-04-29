@@ -28,7 +28,7 @@ const Routine = () => {
                     skills and habits.
                   </Card.Text>
                 </Collapse>
-                <Button onClick={handleToggle}>
+                <Button onClick={handleToggle} className="text-secondary">
                   {expanded ? "Read less" : "Read more"}
                 </Button>
               </Card.ImgOverlay>

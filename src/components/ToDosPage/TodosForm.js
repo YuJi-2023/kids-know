@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { TodoList, TodoItem } from "../UI/todolist";
 import { Container, Row, Col } from "react-bootstrap";
-const Todos = () => {
+
+const TodosForm = ({ title }) => {
   const [todos, setTodos] = useState(TodoList());
 
   return (
@@ -9,7 +10,7 @@ const Todos = () => {
       <Container className="my-5" fluid>
         <Row className="justify-content-md-center">
           <Col lg="8">
-            <h3 className="text-center mb-4 text-primary"> My Daily Schedule is HERE!!</h3>
+            <h3 className="text-center mb-4 text-primary"> {title}</h3>
             <div>
               {todos.map((todo) => (
                 <TodoItem
@@ -31,10 +32,9 @@ const Todos = () => {
             </div>
           </Col>
         </Row>
-        
       </Container>
     </>
   );
 };
 
-export default Todos;
+export default TodosForm;

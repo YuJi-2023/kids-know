@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/HomePage/Home";
-import ToDosPage from "./components/ToDosPage/TodosPage";
+import ToDosPage from "./components/ToDosPage/ToDosPage";
 import SchPage from "./components/SchPage/SchPage";
+import ExpenseTrackerPage from "./components/ExpenseTrackerPage/ExpenseTrackerPage";
 
 function App() {
   return (
@@ -10,6 +11,10 @@ function App() {
         <Route path="index.html" element={<Home />} />
         <Route path="index.html/todos" element={<ToDosPage />} />
         <Route path="index.html/myschedule" element={<SchPage />} />
+        <Route
+          path="index.html/expensetracker"
+          element={<ExpenseTrackerPage />}
+        />
       </Routes>
     </BrowserRouter>
   );

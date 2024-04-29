@@ -1,16 +1,16 @@
 import React from "react";
 import Header from "../Layout/Header/Header";
 import Footer from "../Layout/Footer/Footer";
-import Todos from "./Todos";
+import TodosForm from "./TodosForm";
 import TodosFeature from "./TodosFeature";
-import TodoIdeas from "./TodoIdeas";
-import TodoItems from "./TodoItems";
+import TodoIdeas from "./TodosIdeas";
+import TodoItems from "./TodosItems";
 
 function ToDosPage() {
   return (
     <>
       <Header />
-      <Todos />
+      <TodosForm title="Creat a Todo List Today!" />
       <TodoItems />
       <TodosFeature />
       <TodoIdeas />

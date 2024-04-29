@@ -13,7 +13,9 @@ const Footer = () => {
         <Container>
           <Row className="">
             <Col md={4} className="footer-logo px-2">
-              <Image fluid src={logo} alt="footer-logo" href="/" />
+              <Link to="/index.html">
+                <Image fluid src={logo} alt="footer-logo" />
+              </Link>
             </Col>
             <Col md={2} className="footer-title pt-3">
               <Link to="/index.html" className="fw-bold fs-5">

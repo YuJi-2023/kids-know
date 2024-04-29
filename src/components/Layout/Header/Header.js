@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import logo from "../../../assests/logo.png";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
@@ -20,21 +20,26 @@ const Header = () => {
   const handleMySchedule: () => void = () => {
     navigate("/index.html/myschedule");
   };
+  const handleExpenseTracker: () => void = () => {
+    navigate("/index.html/expensetracker");
+  };
   return (
     <>
-      <Container className="pb-3" fluid>
+      <Container className="border-bottom border-primary" fluid>
         <Row>
           <Col sm={{ span: 4, offset: 4 }}>
             <Row>
               <Col sm={{ span: 8, offset: 2 }}>
-                <Image fluid src={logo} alt="header-logo" href="#" />
+                <Link to="/index.html">
+                  <Image fluid src={logo} alt="header-logo" />
+                </Link>
               </Col>
             </Row>
           </Col>
         </Row>
         <Row>
-          <Col>
-            <Navbar expand="lg" className="bg-body-tertiary">
+          <Col className="bg-body-secondary">
+            <Navbar expand="lg">
               <Container>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
@@ -42,7 +47,9 @@ const Header = () => {
                     <Nav.Link onClick={handleHomeClick}>Home</Nav.Link>
                     <Nav.Link onClick={handleToDos}>ToDos</Nav.Link>
                     <Nav.Link onClick={handleMySchedule}>MySchedule</Nav.Link>
-                    <Nav.Link href="#expenseTracker">$ Tracker</Nav.Link>
+                    <Nav.Link onClick={handleExpenseTracker}>
+                      $ Tracker
+                    </Nav.Link>
                     <NavDropdown title="Tips" id="basic-nav-dropdown">
                       <NavDropdown.Item href="#action/3.1">
                         Money Smart
