@@ -48,7 +48,7 @@ const TodosFeature = () => {
       <Container fluid className="text-center text-secondary py-5">
         <Row className="justify-content-md-center mb-4">
           <Col>
-            <h2 className="text-primary"> Pick Your Rewards</h2>
+            <h2 className="text-primary"> Unlock Your Rewards</h2>
           </Col>
         </Row>
         <Row className="justify-content-md-center px-5 mb-4">

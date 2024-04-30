@@ -33,7 +33,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/index.html" className="footer-link">
+                  <Link to="/index.html/expensetracker" className="footer-link">
                     $ Tracker
                   </Link>
                 </li>

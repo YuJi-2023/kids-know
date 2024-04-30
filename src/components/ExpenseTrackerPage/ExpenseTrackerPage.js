@@ -2,6 +2,8 @@ import React from "react";
 import { Container, Row, Col, Image, Table } from "react-bootstrap";
 import Header from "../Layout/Header/Header";
 import Footer from "../Layout/Footer/Footer";
+import WebBtn from "../UI/WebBtn";
+import trackerHero from "../../assests/trackerHero.jpg";
 
 const ExpenseTrackerPage = () => {
   return (
@@ -59,6 +61,23 @@ const ExpenseTrackerPage = () => {
             />
           </Col>
         </Row>
+      </Container>
+      <Container className="mt-5 px-0" fluid>
+        <div
+          className="py-5 text-center"
+          style={{
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url(${trackerHero})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            height: "640px",
+          }}
+        >
+          <Row>
+            <Col xs={{ span: 4, offset: 4 }} className="text-center">
+              <WebBtn text="Get Started" link={""} />
+            </Col>
+          </Row>
+        </div>
       </Container>
       <Footer />
     </>
