@@ -3,7 +3,11 @@ import { Container, Row, Col, Image, Table } from "react-bootstrap";
 import Header from "../Layout/Header/Header";
 import Footer from "../Layout/Footer/Footer";
 import WebBtn from "../UI/WebBtn";
-import trackerHero from "../../assests/trackerHero.jpg";
+import trackerHero from "../../assests/TrackerPage/trackerHero.jpg";
+import badge_1 from "../../assests/TrackerPage/badges/badge_1.png";
+import badge_2 from "../../assests/TrackerPage/badges/badge_2.png";
+import badge_3 from "../../assests/TrackerPage/badges/badge_3.png";
+import badge_4 from "../../assests/TrackerPage/badges/badge_4.png";
 
 const ExpenseTrackerPage = () => {
   return (
@@ -59,6 +63,22 @@ const ExpenseTrackerPage = () => {
               src="https://edgeearlylearning.com.au/wp-content/uploads/2024/02/parents-guide-to-pocket-money-image.jpg"
               roundedCircle
             />
+          </Col>
+        </Row>
+      </Container>
+      <Container>
+        <Row>
+          <Col xs={6} md={3}>
+            <Image fluid src={badge_1} />
+          </Col>
+          <Col xs={6} md={3}>
+            <Image fluid src={badge_2} />
+          </Col>
+          <Col xs={6} md={3}>
+            <Image fluid src={badge_3} />
+          </Col>
+          <Col xs={6} md={3}>
+            <Image fluid src={badge_4} />
           </Col>
         </Row>
       </Container>
