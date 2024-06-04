@@ -1,8 +1,55 @@
 import { Form, Button, Container, Row, Col, Image } from "react-bootstrap";
 import logo from "../assests/logo.png";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+
+const BACKEND_URL = "http://localhost:8000";
 
 const LoginPage = () => {
+  const [login, setLogin] = useState({
+    name: "",
+    password: ""
+  })
+
+  const handleLogin = async () => {
+    const response = await checkUserInfo(login.name, login.password);
+    console.log(response);
+  };
+
+  const checkUserInfo = async (name, password) => {
+    try {
+      const response = await fetch(`${BACKEND_URL}/login`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, password }),
+      });
+  
+      if (!response.ok) {
+        // Handle HTTP errors
+        const errorText = await response.text();
+        throw new Error(`HTTP error! status: ${response.status}, message: ${errorText}`);
+      }
+  
+      return response;
+    } catch (error) {
+      // Log and rethrow the error for further handling
+      console.error('Failed to fetch:', error);
+      throw error;
+    }
+  };
+  
+
+  const handleChange = (e, field) => {
+    if (field === "name") {
+      setLogin({...login, name: e.target.value})
+    }
+    if (field === "password") {
+      setLogin({...login, password: e.target.value})
+    }
+}
+
   return (
     <>
       <Container>
@@ -23,17 +70,18 @@ const LoginPage = () => {
             <Form>
               <Form.Group className="mb-3" controlId="formGroupEmail">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
+                <Form.Control type="email" placeholder="Enter email" onChange={(e)=>handleChange(e, "name")} />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formGroupPassword">
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" />
+                <Form.Control type="password" placeholder="Password" onChange={(e)=>handleChange(e, "password")} />
               </Form.Group>
             </Form>
 
-            <Button variant="primary" type="submit">
+            <Button onClick={handleLogin} variant="primary" type="submit">
               Login
             </Button>
+            <div></div>
           </Col>
           <Col lg="4"></Col>
         </Row>
