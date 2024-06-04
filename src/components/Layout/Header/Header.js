@@ -1,16 +1,23 @@
 import React from "react";
 import { useNavigate, Link } from "react-router-dom";
 import logo from "../../../assests/logo.png";
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import WebBtn from "../../UI/WebBtn";
 
 const Header = () => {
   const navigate = useNavigate();
   const handleHomeClick: () => void = () => {
     navigate("/index.html");
+  };
+
+  const handleLogin: () => void = () => {
+    navigate("/index.html/login");
+  };
+
+  const handleSignup: () => void = () => {
+    navigate("/index.html/signup");
   };
 
   const handleToDos: () => void = () => {
@@ -60,10 +67,12 @@ const Header = () => {
                     </NavDropdown>
                   </Nav>
                 </Navbar.Collapse>
-                <WebBtn
-                  text={"Contact Us"}
-                  link={"mailto:sophia.jiyu@gmail.com"}
-                />
+                <Button onClick={handleLogin} className="text-primary mx-1" variant="secondary">
+                  Login
+                </Button>
+                <Button onClick={handleSignup} className="text-secondary mx-1" variant="primary">
+                  Sign up
+                </Button>
               </Container>
             </Navbar>
           </Col>
