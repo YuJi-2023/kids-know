@@ -8,22 +8,23 @@ const BACKEND_URL = "http://localhost:8000";
 const SignupPage = () => {
   const [signup, setSignup] = useState({
     name: "",
+    email: "",
     password: "",
   });
 
   const handleSignup = async () => {
-    const response = await checkUserInfo(signup.name, signup.password);
+    const response = await checkUserInfo(signup.name, signup.email, signup.password);
     console.log(response);
   };
 
-  const checkUserInfo = async (name, password) => {
+  const checkUserInfo = async (name, email, password) => {
     try {
       const response = await fetch(`${BACKEND_URL}/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ name, password }),
+        body: JSON.stringify({ name, email, password }),
       });
 
       if (!response.ok) {
@@ -45,6 +46,9 @@ const SignupPage = () => {
   const handleChange = (e, field) => {
     if (field === "name") {
       setSignup({ ...signup, name: e.target.value });
+    }
+    if (field === "email") {
+      setSignup({ ...signup, email: e.target.value });
     }
     if (field === "password") {
       setSignup({ ...signup, password: e.target.value });
@@ -69,19 +73,27 @@ const SignupPage = () => {
           <Col lg="4"></Col>
           <Col className="bg-primary p-5">
             <Form>
+              <Form.Group className="mb-3" controlId="formGroupUsername">
+                <Form.Label>Username</Form.Label>
+                <Form.Control
+                  type="username"
+                  placeholder="Enter username"
+                  onChange={(e) => handleChange(e, "name")}
+                />
+              </Form.Group>
               <Form.Group className="mb-3" controlId="formGroupEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control
                   type="email"
                   placeholder="Enter email"
-                  onChange={(e) => handleChange(e, "name")}
+                  onChange={(e) => handleChange(e, "email")}
                 />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formGroupPassword">
                 <Form.Label>Password</Form.Label>
                 <Form.Control
                   type="password"
-                  placeholder="Password"
+                  placeholder="Enter password"
                   onChange={(e) => handleChange(e, "password")}
                 />
               </Form.Group>

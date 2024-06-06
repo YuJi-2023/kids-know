@@ -68,13 +68,13 @@ const LoginPage = () => {
           <Col lg="4"></Col>
           <Col className="bg-secondary p-5">
             <Form>
-              <Form.Group className="mb-3" controlId="formGroupEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" onChange={(e)=>handleChange(e, "name")} />
+              <Form.Group className="mb-3" controlId="formGroupUsername">
+                <Form.Label>Username</Form.Label>
+                <Form.Control type="username" placeholder="Enter username" onChange={(e)=>handleChange(e, "name")} />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formGroupPassword">
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" onChange={(e)=>handleChange(e, "password")} />
+                <Form.Control type="password" placeholder="Enter password" onChange={(e)=>handleChange(e, "password")} />
               </Form.Group>
             </Form>
 
