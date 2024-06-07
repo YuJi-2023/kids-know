@@ -1,8 +1,10 @@
-import React from "react";
-import { Container, Row, Col, Image, Table } from "react-bootstrap";
+import React, { useState } from "react";
+import { Container, Row, Col, Image } from "react-bootstrap";
 import Header from "../Layout/Header/Header";
 import Footer from "../Layout/Footer/Footer";
 import WebBtn from "../UI/WebBtn";
+import ExpenseForm from "./ExpenseForm";
+import ExpenseTable from "./ExpenseTable";
 import trackerHero from "../../assests/TrackerPage/trackerHero.jpg";
 import badge_1 from "../../assests/TrackerPage/badges/badge_1.png";
 import badge_2 from "../../assests/TrackerPage/badges/badge_2.png";
@@ -10,6 +12,12 @@ import badge_3 from "../../assests/TrackerPage/badges/badge_3.png";
 import badge_4 from "../../assests/TrackerPage/badges/badge_4.png";
 
 const ExpenseTrackerPage = () => {
+  const [expenses, setExpenses] = useState([]);
+
+  const addExpense = (expense) => {
+    setExpenses([...expenses, expense]);
+  };
+
   return (
     <>
       <Header />
@@ -19,43 +27,8 @@ const ExpenseTrackerPage = () => {
             <h3 className="text-center mb-4 text-primary">
               My Expense Tracker
             </h3>
-            <div>
-              <Table striped bordered hover>
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>Description</th>
-                    <th>Amount</th>
-                    <th>Subject</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td colSpan={2}>Total</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </Table>
-            </div>
+            <ExpenseForm onAddExpense={addExpense} />
+            <ExpenseTable expenses={expenses} />
           </Col>
           <Col xs={0} md={4} className="px-5">
             <Image
