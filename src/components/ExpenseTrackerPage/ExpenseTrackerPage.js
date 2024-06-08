@@ -28,6 +28,9 @@ const ExpenseTrackerPage = () => {
               My Expense Tracker
             </h3>
             <ExpenseForm onAddExpense={addExpense} />
+            <h3 className="text-center mb-4 text-primary">
+              My Expense List
+            </h3>
             <ExpenseTable expenses={expenses} />
           </Col>
           <Col xs={0} md={4} className="px-5">
