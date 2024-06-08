@@ -1,13 +1,40 @@
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import { useState } from "react";
 
+const BACKEND_URL = "http://localhost:8000";
+
 const ExpenseForm = ({ onAddExpense }) => {
   const [category, setCategory] = useState("");
   const [amount, setAmount] = useState("");
   const [date, setDate] = useState("");
   const [description, setDescription] = useState("");
 
+  // define async function to handle POST request
+  const handleNewExpense = async (newExpense) => {
+    try {
+      const response = await fetch(`${BACKEND_URL}/tracker`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newExpense),
+      });
+
+      if (!response.ok) {
+        // Handle HTTP errors
+        const errorText = await response.text();
+        throw new Error(
+          `HTTP error! status: ${response.status}, message: ${errorText}`
+        );
+      }
+    } catch (error) {
+      console.error("Failed to fetch:", error);
+      throw error;
+    }
+  };
+
   const handleAddtotracker = (e) => {
+    //job1: update expenseList
     e.preventDefault();
     const newExpense = {
       category,
@@ -20,12 +47,9 @@ const ExpenseForm = ({ onAddExpense }) => {
     setAmount("");
     setDate("");
     setDescription("");
-  };
 
-  const handleCatergotyChange = (e) => {
-    const selectedIndex = e.target.options.selectedIndex;
-    const selectedText = e.target.options[selectedIndex].text;
-    setCategory(selectedText);
+    //job2: call handle POST function for db storage
+    handleNewExpense(newExpense);
   };
 
   return (
@@ -41,13 +65,13 @@ const ExpenseForm = ({ onAddExpense }) => {
                     <Form.Select
                       aria-label="select category"
                       value={category}
-                      onChange={handleCatergotyChange}
+                      onChange={(e) => setCategory(e.target.value)}
                     >
                       <option>Select One</option>
-                      <option value="1">Toys</option>
-                      <option value="2">Study</option>
-                      <option value="3">Snacks</option>
-                      <option value="3">Other</option>
+                      <option value="Toys">Toys</option>
+                      <option value="Study">Study</option>
+                      <option value="Snacks">Snacks</option>
+                      <option value="Other">Other</option>
                     </Form.Select>
                   </Form.Group>
                 </Col>
