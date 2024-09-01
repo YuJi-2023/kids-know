@@ -58,19 +58,27 @@ const Header = () => {
                       $ Tracker
                     </Nav.Link>
                     <NavDropdown title="Tips" id="basic-nav-dropdown">
-                      <NavDropdown.Item href="#action/3.1">
+                      <NavDropdown.Item href="https://raisingchildren.net.au/preschoolers/family-life/pocket-money/money-management-for-children">
                         Money Smart
                       </NavDropdown.Item>
-                      <NavDropdown.Item href="#action/3.2">
+                      <NavDropdown.Item href="https://www.momjunction.com/articles/time-management-for-kids-students_00709236/">
                         Time Master
                       </NavDropdown.Item>
                     </NavDropdown>
                   </Nav>
                 </Navbar.Collapse>
-                <Button onClick={handleLogin} className="text-primary mx-1" variant="secondary">
+                <Button
+                  onClick={handleLogin}
+                  className="text-primary mx-1"
+                  variant="secondary"
+                >
                   Login
                 </Button>
-                <Button onClick={handleSignup} className="text-secondary mx-1" variant="primary">
+                <Button
+                  onClick={handleSignup}
+                  className="text-secondary mx-1"
+                  variant="primary"
+                >
                   Sign up
                 </Button>
               </Container>
